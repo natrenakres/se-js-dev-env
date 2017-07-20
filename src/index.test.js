@@ -15,7 +15,7 @@ describe('index.html', function () {
         var index = fs.readFileSync('./src/index.html', "utf-8");
         jsdom.env(index, function (err, window) {
             var h1 = window.document.getElementsByTagName('h1')[0];
-            chai.expect(h1.innerHTML).to.equal("Hello World!");
+            chai.expect(h1.innerHTML).to.equal("Users");
             done();
             window.close();
         })
